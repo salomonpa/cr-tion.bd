@@ -22,8 +22,8 @@ values('Bemssé', 'sisline', 'pattedoie', 'ftoungai@gmail.com',56498921),
 );
 INSERT INTO categories (categoriesid, nom)
 VALUES (1,'electromenager'),
-        (2,'ordinateur'),
-        (3,'télévision'),
+        (2,'electromenager'),
+        (3,'electromenager'),
         (4, 'téléphone'),
         (5,'ventilateur');
 
@@ -37,10 +37,10 @@ CREATE TABLE articles (
     FOREIGN KEY (categoriesid) REFERENCES categories (categoriesid)
 );
 
-INSERT INTO articles ( nom, quantite, prix_achat, prix_vente )
-VALUES ('fOUR', 10, 55000, 95000),
-       ('congélateur', 10, 85000, 140000 ),
-       ('télé.plasma', 10, 80000, 130000 );
+INSERT INTO articles ( nom, quantite, prix_achat, prix_vente, categoriesid )
+VALUES ('fOUR', 10, 55000, 95000,1),
+       ('congélateur', 10, 85000, 140000,1),
+       ('télé.plasma', 10, 80000, 130000,1 );
 
 
        CREATE TABLE fournisseur(
